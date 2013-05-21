@@ -34,7 +34,7 @@ class BrandsController < ApplicationController
 
   # GET /brands/1/edit
   def edit
-    @brand = Brand.find(params[:id])
+    @brand = Brand.where("id = '#{params[:id]}'")
   end
 
   # POST /brands

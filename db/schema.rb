@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130422214447) do
+ActiveRecord::Schema.define(:version => 20130508202711) do
 
   create_table "brands", :force => true do |t|
     t.string   "name"
@@ -39,8 +39,12 @@ ActiveRecord::Schema.define(:version => 20130422214447) do
     t.integer  "brand_id"
     t.integer  "vehicle_type_id"
     t.integer  "customer_id"
-    t.datetime "created_at",      :null => false
-    t.datetime "updated_at",      :null => false
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+    t.float    "price"
+    t.integer  "kilimeters_covered"
+    t.string   "fuel_type"
+    t.integer  "year"
   end
 
   add_index "vehicles", ["brand_id"], :name => "index_vehicles_on_brand_id"

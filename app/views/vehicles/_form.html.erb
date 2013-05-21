@@ -1,6 +1,7 @@
 <%= form_for(@vehicle) do |f| %>
   <% if @vehicle.errors.any? %>
-    <div id="error_explanation">
+<div class="alert alert-error">
+<div id="error_explanation">
       <h2><%= pluralize(@vehicle.errors.count, "error") %> prohibited this vehicle from being saved:</h2>
 
       <ul>
@@ -9,6 +10,9 @@
       <% end %>
       </ul>
     </div>
+</div>
+
+    
   <% end %>
 
   <div class="field">
@@ -26,6 +30,22 @@
   <div class="field">
     <%= f.label :customer %><br />
     <%= f.collection_select :customer_id, Customer.all, :id, :name %>
+  </div>
+  <div class="field">
+    <%= f.label :price %><br />
+    <%= f.text_field :price%>
+  </div>
+  <div class="field">
+    <%= f.label :kilimeters_covered %><br />
+    <%= f.text_field :kilimeters_covered%>
+  </div>
+  <div class="field">
+    <%= f.label :fuel_type %><br />
+    <%= f.text_field :fuel_type%>
+  </div>
+  <div class="field">
+    <%= f.label :year %><br />
+    <%= f.text_field :year%>
   </div>
   <div class="actions">
     <%= f.submit %>

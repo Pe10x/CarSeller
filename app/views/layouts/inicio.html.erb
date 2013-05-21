@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Concesionaria</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<div class="container">
+
+<div aling="center">
+
+  <div id="header">
+      <div class="row-fluid">
+            <div class="span4">
+              <%= image_tag('logo.jpg')  %>
+            </div><!--/span-->
+            <div class="span4">
+              <center> <h1>Concesionaria</h1></center> 
+            </div><!--/span-->
+            <div class="span4">
+               <%= image_tag('logo.jpg')  %>
+            </div><!--/span-->
+          </div>
+</div>
+
+
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span2">
+
+<ul class="nav nav-list">
+  <li class="nav-header">Menu</li>
+
+
+  <li><%= link_to 'Marcas', brands_path %></li>
+  <li><%= link_to 'Clientes',customers_path %></li>
+  <li><%= link_to 'Tipo de vehiculo',vehicle_types_url %></li>
+  <li><%= link_to 'Vehiculo', vehicles_url %></li>
+</ul>
+
+
+
+      <!--Sidebar content-->
+    </div>
+    <div class="span10">
+
+<div id="myCarousel" class="carousel slide">
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+  </ol>
+  <!-- Carousel items -->
+ <div class="row-fluid">
+<div class=" offset1 span10">
+
+  <div class="carousel-inner">
+
+     
+
+    <div class="active item"><%= image_tag('fiat.jpg')  %></div>
+    <div class="item"><%= image_tag('r12.jpg')  %></div>
+    <div class="item"><%= image_tag('kangoo.jpg')  %></div>
+    <div class="item"><%= image_tag('chevrolet.jpg')  %></div>
+    <div class="item"><%= image_tag('wvvento.jpg')  %></div>
+
+
+  </div>
+
+</div>
+</div>
+  <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+  <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+</div>
+    </div>
+  </div>
+</div>
+<div class="row-fluid">
+            <div class="span4">
+              <center><h2>Chevrolet</h2></center>
+              <p><%= image_tag('chevrolet.jpg')  %></p>
+            </div><!--/span-->
+            <div class="span4">
+              <center><h2>Fiat</h2></center>
+              <p><%= image_tag('fiat.jpg')  %></p>
+            </div><!--/span-->
+            <div class="span4">
+              <center><h2>Ford</h2></center>
+              <p><%= image_tag('ford.jpg')  %></p>
+            </div><!--/span-->
+          </div>
+
+<div>
+    &copy; <%= Time.now.year %> - Concesionaria
+  </div>
+   
+  </div>
+</body>
+</html>

@@ -11,6 +11,10 @@ CarSeller::Application.routes.draw do
   resources :brands
 
 
+
+  match 'inicio' => 'inicio#index'
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
